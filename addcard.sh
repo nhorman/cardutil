@@ -1,8 +1,8 @@
 #!/bin/sh
 
-
 DB=$1
 JSONFILE=$2
+CATEGORY=$3
 TMPDIR=$(mktemp -d addcard.XXXXXX)
 
 function cleanup()
@@ -22,6 +22,11 @@ CREDITTEXT=$(jq '.credittext' $JSONFILE)
 CREDITURL=$(jq  '.crediturl' $JSONFILE)
 CARDCROP=$(jq -r '.cardcrop' $JSONFILE)
 
+if [ -z "$CATEGORY" ]
+then
+	CATEGORY="Any"
+fi
+
 if [ "$CARDCROP" == "null" ]
 then
 	CARDCROP=""
@@ -38,5 +43,5 @@ composite -compose atop -gravity center $TMPDIR/cardlogo.png borders/cardborder.
 convert $TMPDIR/cardfullimage.png -crop 168x188+719+988 +repage -resize 148x168 +repage -colors 32 -gravity south -pointsize 10 -annotate +0+10 "$CARDTEXT" $TMPDIR/logo.png
 
 #insert the data into the table
-echo "insert into card(cardlogo, level, year, location, cardtext, credittext, crediturl) " \
-     "values(x'"$(hexdump -v -e '1/1 "%02x"' $TMPDIR/logo.png)"', $LEVEL, $YEAR, $LOCATION, $CARDTEXT, $CREDITTEXT, $CREDITURL);" | sqlite3 $DB
+echo "insert into card(cardlogo, level, year, location, category, cardtext, credittext, crediturl) " \
+     "values(x'"$(hexdump -v -e '1/1 "%02x"' $TMPDIR/logo.png)"', $LEVEL, $YEAR, $LOCATION, \"$CATEGORY\", $CARDTEXT, $CREDITTEXT, $CREDITURL);" | sqlite3 $DB
