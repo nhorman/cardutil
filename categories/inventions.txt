@@ -8,3 +8,7 @@ cards/flamethrower.json
 
 cards/woodblock.json
 cards/gunpowder.json
+cards/www.json
+cards/dvd.json
+cards/pcalculator.json
+cards/electronmicroscope.json
