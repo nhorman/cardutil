@@ -2,3 +2,6 @@ cards/piano.json
 cards/penicilin.json
 cards/chess.json
 cards/matches.json
+cards/antikythera.json
+cards/gears.json
+cards/flamethrower.json

@@ -1,8 +1,9 @@
 {
 	"cardlogo": "https://upload.wikimedia.org/wikipedia/commons/9/99/Penicillin_core.svg",
+	"level": 1,
 	"year": 1928,
 	"location": "Scotland",
-	"cardtext": "The discovery of Penicilin",
+	"cardtext": "The discovery\n of Penicilin",
 	"cardcrop": "",
 	"credittext": "The Core Structure of Penicilin",
 	"crediturl": "https://en.wikipedia.org/wiki/History_of_penicillin#/media/File:Penicillin_core.svg"
