@@ -5,3 +5,6 @@ cards/matches.json
 cards/antikythera.json
 cards/gears.json
 cards/flamethrower.json
+
+cards/woodblock.json
+cards/gunpowder.json

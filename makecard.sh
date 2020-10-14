@@ -33,7 +33,7 @@ read CATEGORY
 
 echo "{" >> $CARDFILE
 echo -e "\t \"cardlogo\": \"$LOGO\"," >> $CARDFILE
-echo -e "\t \"level\": \"$LEVEL\"," >> $CARDFILE
+echo -e "\t \"level\": $LEVEL," >> $CARDFILE
 echo -e "\t \"year\": $YEAR," >> $CARDFILE
 echo -e "\t \"location\": \"$LOCATION\"," >> $CARDFILE
 echo -e "\t \"cardtext\": \"$CARDTEXT\"," >> $CARDFILE
