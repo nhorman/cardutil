@@ -32,6 +32,9 @@ then
 	CARDCROP=""
 fi
 
+#Check and maybe add the card location
+./addlocation.sh $LOCATION
+
 echo "Building card $JSONFILE"
 
 #get the card logo
