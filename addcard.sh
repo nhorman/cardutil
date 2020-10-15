@@ -32,9 +32,18 @@ then
 	CARDCROP=""
 fi
 
-#Check and maybe add the card location
+#Check and maybe add the card location to our json list
 ./addlocation.sh $LOCATION
 
+#Now add the location to the locations db, but only if it doesn't exist
+SLOCATION=$(echo $LOCATION | tr -d '"')
+L_LOCATION=$(jq -r --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .location' locations/cardlocations.json)
+L_FROMLEFT=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .fromleft' locations/cardlocations.json)
+L_FROMTOP=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .fromtop' locations/cardlocations.json)
+L_WIDTH=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .width' locations/cardlocations.json)
+L_HEIGHT=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .height' locations/cardlocations.json)
+echo "Adding location to locations table"
+echo "INSERT OR IGNORE INTO locations(location, fromleft, fromtop, width, height) values(\"$L_LOCATION\", $L_FROMLEFT, $L_FROMTOP, $L_WIDTH, $L_HEIGHT);" | sqlite3 $DB
 echo "Building card $JSONFILE"
 
 #get the card logo

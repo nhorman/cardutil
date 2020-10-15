@@ -1,4 +1,74 @@
 {
   "locations": [
+    {
+      "location": "Italy",
+      "fromleft": 36.57,
+      "fromtop": 153.584,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Scotland",
+      "fromleft": 517.81,
+      "fromtop": 207.537,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "India",
+      "fromleft": 232.14,
+      "fromtop": 75.468,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "China",
+      "fromleft": 306.34,
+      "fromtop": 131.738,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Greece",
+      "fromleft": 64.13,
+      "fromtop": 143.323,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Switzerland",
+      "fromleft": 23.85,
+      "fromtop": 172.12,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "America",
+      "fromleft": 248.57,
+      "fromtop": 136.041,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Japan",
+      "fromleft": 406.51,
+      "fromtop": 133.062,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Sweeden",
+      "fromleft": 54.59,
+      "fromtop": 220.777,
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "England",
+      "fromleft": 526.82,
+      "fromtop": 192.311,
+      "width": 20,
+      "height": 20
+    }
   ]
 }

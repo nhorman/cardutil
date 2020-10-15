@@ -3,18 +3,19 @@ export RLOC=$*
 
 #strip quotes, if any
 GRLOC=$(echo $RLOC | tr -d '"')
-
 #check locations list to see if we need to add it
-FOUNDLOC=$(jq --arg RLOC "$GRLOC" '.locations[] | select(.location==$RLOC) | .location' ./locations/cardlocations.json)
+FOUNDLOC=$(jq -r --arg RLOC "$GRLOC" '.locations[] | select(.location==$RLOC) | .location' ./locations/cardlocations.json)
 
 if [ -n "$FOUNDLOC" ]
 then
-	echo "Found location info for $GRLOC
+	echo "Found location info for $GRLOC"
 	exit 0
+else
+	echo "No location found for $GRLOC"
 fi
 
 echo "Set location for $RLOC"
-echo -n "longitude: "
+echo :-n "longitude: "
 read LONGITUDE 
 
 echo -n "North or South [N/S]: "
