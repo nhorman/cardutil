@@ -55,8 +55,8 @@ curl -s -o $TMPDIR/$LOGONAME "$CARDLOGO"
 
 #convert it to a png file at a small size
 convert $TMPDIR/$LOGONAME  $CARDCROP -resize 128x128 +repage -colors 32 $TMPDIR/cardlogo.png
-composite -compose atop -gravity center $TMPDIR/cardlogo.png borders/cardborder.png $TMPDIR/cardfullimage.png
-convert $TMPDIR/cardfullimage.png -crop 168x188+719+988 +repage -resize 148x168 +repage -colors 32 -gravity south -pointsize 10 -annotate +0+10 "$CARDTEXT" $TMPDIR/logo.png
+composite -compose atop -gravity center -geometry +0-15 $TMPDIR/cardlogo.png borders/newborder.png $TMPDIR/cardfullimage.png
+convert $TMPDIR/cardfullimage.png -crop 168x188 +repage -resize 148x168 +repage -colors 32 -gravity south -pointsize 10 -annotate +0+10 "$CARDTEXT" $TMPDIR/logo.png
 
 #insert the data into the table
 echo "insert into card(cardlogo, level, year, location, category, cardtext, credittext, crediturl) " \
