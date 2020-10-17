@@ -40,16 +40,18 @@ WIDTH=20
 HEIGHT=20
 
 #Try to get location from opencage
-curl -s -G -o $TMPDIR/opencage.json --data-urlencode "countrycode=$COUNTRYCODE" --data-urlencode "location=$GRLOC" "https://api.opencagedata.com/geocode/v1/json?q=%{location}&countrycode=%{countrycode}&key=4079fa880a1b4d83b3a9b07a9323b64a"
-LONGRESULT=$(jq -r '.results[0].annotations.DMS.lng' $TMPDIR/opencage.json | tr -cd '[:print:]' | tr -d \')
-LATRESULT=$(jq -r '.results[0].annotations.DMS.lat' $TMPDIR/opencage.json | tr -cd '[:print:]' | tr -d \')
+curl -s -G -o $TMPDIR/opencage.json --data-urlencode "countrycode=$COUNTRYCODE" --data-urlencode "q=$GRLOC" "https://api.opencagedata.com/geocode/v1/json?key=4079fa880a1b4d83b3a9b07a9323b64a"
+LONGRESULT=$(jq -r '.results[] | select(.components.country="$GRLOC") | .annotations.DMS.lng' $TMPDIR/opencage.json | head -n 1 | tr -cd '[:print:]' | tr -d \')
+LATRESULT=$(jq -r '.results[] | select(.components.country="$GRLOC") | .annotations.DMS.lat' $TMPDIR/opencage.json | head -n 1 | tr -cd '[:print:]' | tr -d \')
 
 if [ -n "$LONGRESULT" -a -n "$LATRESULT" ]
 then
 	LONGDEG=$(echo $LONGRESULT | cut -d" " -f1)
 	LONGMIN=$(echo $LONGRESULT | cut -d" " -f2)
+	EW=$(echo $LONGRESULT | cut -d" " -f4)
 	LATDEG=$(echo $LATRESULT | cut -d" " -f1)
 	LATMIN=$(echo $LATRESULT | cut -d" " -f2)
+	NS=$(echo $LATRESULT | cut -d" " -f4)
 
 	LATITUDE=$(dc -e "3 k $LATMIN 60 / $LATDEG + p")
 	LONGITUDE=$(dc -e "3 k $LONGMIN 60 / $LONGDEG + p")

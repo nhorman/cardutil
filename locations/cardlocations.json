@@ -2,71 +2,91 @@
   "locations": [
     {
       "location": "Italy",
-      "fromleft": 36.57,
-      "fromtop": 153.584,
+      "longitude": 12.666,
+      "latitude": 42.633,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "Scotland",
-      "fromleft": 517.81,
-      "fromtop": 207.537,
+      "longitude": 4.1,
+      "latitude": 56.783,
+      "longdir": "West",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "India",
-      "fromleft": 232.14,
-      "fromtop": 75.468,
+      "longitude": 78.666,
+      "latitude": 22.35,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "China",
-      "fromleft": 306.34,
-      "fromtop": 131.738,
+      "longitude": 104.983,
+      "latitude": 35,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "Greece",
-      "fromleft": 64.13,
-      "fromtop": 143.323,
+      "longitude": 21.983,
+      "latitude": 38.983,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "Switzerland",
-      "fromleft": 23.85,
-      "fromtop": 172.12,
+      "longitude": 8.216,
+      "latitude": 46.783,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "America",
-      "fromleft": 248.57,
-      "fromtop": 136.041,
+      "longitude": 87.25,
+      "latitude": 33.733,
+      "longdir": "West",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "Japan",
-      "fromleft": 406.51,
-      "fromtop": 133.062,
+      "longitude": 139.233,
+      "latitude": 36.566,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "Sweeden",
-      "fromleft": 54.59,
-      "fromtop": 220.777,
+      "longitude": 14.516,
+      "latitude": 59.666,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     },
     {
       "location": "England",
-      "fromleft": 526.82,
-      "fromtop": 192.311,
+      "longitude": 0.533,
+      "latitude": 52.783,
+      "longdir": "East",
+      "latdir": "North",
       "width": 20,
       "height": 20
     }

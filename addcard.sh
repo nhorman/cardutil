@@ -22,7 +22,7 @@ CARDTEXT=$(jq '.cardtext' $JSONFILE)
 CREDITTEXT=$(jq '.credittext' $JSONFILE)
 CREDITURL=$(jq  '.crediturl' $JSONFILE)
 CARDCROP=$(jq -r '.cardcrop' $JSONFILE)
-COUNTRYCODE=$(jq '.countrycode' $JSONFILE)
+COUNTRYCODE=$(jq -r '.countrycode' $JSONFILE)
 
 if [ -z "$CATEGORY" ]
 then
