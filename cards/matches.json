@@ -3,6 +3,7 @@
 	"level": 3,
 	"year": 1366,
 	"location": "China",
+	"countrycode": "cn",
 	"cardtext": "The invention of\n the Sulfer Match",
 	"cardcrop": "-crop 2336x2336+0+1000 -gravity center",
 	"credittext": "By Sebastian Ritter Creative Commons Attribution-Share Alike 2.5 Generic license.",

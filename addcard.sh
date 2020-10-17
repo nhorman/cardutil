@@ -12,6 +12,7 @@ function cleanup()
 
 trap cleanup EXIT
 
+echo "Building card $JSONFILE"
 CARDLOGO=$(jq -r '.cardlogo' $JSONFILE)
 LOGONAME=$(basename $CARDLOGO)
 LEVEL=$(jq -r '.level' $JSONFILE)
@@ -21,6 +22,7 @@ CARDTEXT=$(jq '.cardtext' $JSONFILE)
 CREDITTEXT=$(jq '.credittext' $JSONFILE)
 CREDITURL=$(jq  '.crediturl' $JSONFILE)
 CARDCROP=$(jq -r '.cardcrop' $JSONFILE)
+COUNTRYCODE=$(jq '.countrycode' $JSONFILE)
 
 if [ -z "$CATEGORY" ]
 then
@@ -33,18 +35,20 @@ then
 fi
 
 #Check and maybe add the card location to our json list
-./addlocation.sh $LOCATION
+./addlocation.sh $COUNTRYCODE $LOCATION
 
 #Now add the location to the locations db, but only if it doesn't exist
 SLOCATION=$(echo $LOCATION | tr -d '"')
 L_LOCATION=$(jq -r --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .location' locations/cardlocations.json)
-L_FROMLEFT=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .fromleft' locations/cardlocations.json)
-L_FROMTOP=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .fromtop' locations/cardlocations.json)
+L_LONGITUDE=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .longitude' locations/cardlocations.json)
+L_LATITUDE=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .latitude' locations/cardlocations.json)
+L_LONGDIR=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .longdir' locations/cardlocations.json)
+L_LATDIR=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .latdir' locations/cardlocations.json)
 L_WIDTH=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .width' locations/cardlocations.json)
 L_HEIGHT=$(jq --arg LOCATION $SLOCATION '.locations[] | select(.location==$LOCATION) | .height' locations/cardlocations.json)
+
 echo "Adding location to locations table"
-echo "INSERT OR IGNORE INTO locations(location, fromleft, fromtop, width, height) values(\"$L_LOCATION\", $L_FROMLEFT, $L_FROMTOP, $L_WIDTH, $L_HEIGHT);" | sqlite3 $DB
-echo "Building card $JSONFILE"
+echo "INSERT OR IGNORE INTO locations(location, longitude, latitude, longdir, latdir, width, height) values(\"$L_LOCATION\", $L_LONGITUDE, $L_LATITUDE, $L_LONGDIR, $L_LATDIR, $L_WIDTH, $L_HEIGHT);" | sqlite3 $DB
 
 #get the card logo
 curl -s -o $TMPDIR/$LOGONAME "$CARDLOGO"

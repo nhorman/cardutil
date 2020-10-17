@@ -16,6 +16,9 @@ read YEAR
 echo -n "Location: "
 read LOCATION
 
+echo -n "Country Code: "
+read COUNTRYCODE
+
 echo -n "Card Text: "
 read CARDTEXT
 
@@ -36,6 +39,7 @@ echo -e "\t \"cardlogo\": \"$LOGO\"," >> $CARDFILE
 echo -e "\t \"level\": $LEVEL," >> $CARDFILE
 echo -e "\t \"year\": $YEAR," >> $CARDFILE
 echo -e "\t \"location\": \"$LOCATION\"," >> $CARDFILE
+echo -e "\t \"countrycode\": \"$COUNTRYCODE\"," >> $CARDFILE
 echo -e "\t \"cardtext\": \"$CARDTEXT\"," >> $CARDFILE
 echo -e "\t \"cardcrop\": \"$CARDCROP\"," >> $CARDFILE
 echo -e "\t \"credittext\": \"$CREDITTEXT\"," >> $CARDFILE
