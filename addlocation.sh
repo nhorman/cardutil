@@ -36,8 +36,8 @@ else
 	echo "No location found for $GRLOC"
 fi
 
-WIDTH=30
-HEIGHT=30
+WIDTH=20
+HEIGHT=20
 
 #Try to get location from opencage
 curl -s -G -o $TMPDIR/opencage.json --data-urlencode "countrycode=$COUNTRYCODE" --data-urlencode "q=$GRLOC" "https://api.opencagedata.com/geocode/v1/json?key=4079fa880a1b4d83b3a9b07a9323b64a"
