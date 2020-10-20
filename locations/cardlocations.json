@@ -1,13 +1,31 @@
 {
   "locations": [
     {
+      "location": "America",
+      "longitude": 87.25,
+      "latitude": 33.733,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Germany",
+      "longitude": 10.416,
+      "latitude": 51.083,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
       "location": "Italy",
       "longitude": 12.666,
       "latitude": 42.633,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "Scotland",
@@ -15,8 +33,8 @@
       "latitude": 56.783,
       "longdir": "West",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "India",
@@ -24,8 +42,8 @@
       "latitude": 22.35,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "China",
@@ -33,8 +51,8 @@
       "latitude": 35,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "Greece",
@@ -42,8 +60,8 @@
       "latitude": 38.983,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "Switzerland",
@@ -51,17 +69,8 @@
       "latitude": 46.783,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
-    },
-    {
-      "location": "America",
-      "longitude": 87.25,
-      "latitude": 33.733,
-      "longdir": "West",
-      "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "Japan",
@@ -69,8 +78,8 @@
       "latitude": 36.566,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "Sweeden",
@@ -78,8 +87,8 @@
       "latitude": 59.666,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     },
     {
       "location": "England",
@@ -87,8 +96,8 @@
       "latitude": 52.783,
       "longdir": "East",
       "latdir": "North",
-      "width": 30,
-      "height": 30
+      "width": 20,
+      "height": 20
     }
   ]
 }
