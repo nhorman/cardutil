@@ -15,3 +15,6 @@ cards/electronmicroscope.json
 cards/steamlocomotive.json
 cards/differenceengine.json
 cards/morsecode.json
+cards/iphone.json
+./cards/touchtonephone.json
+./cards/laser.json
