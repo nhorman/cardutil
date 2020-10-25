@@ -1,0 +1,7 @@
+./cards/juneteenth.json
+./cards/berlinwallfall.json
+./cards/apollo11.json
+./cards/octoberrevolution.json
+./cards/inchon.json
+./cards/steelstrike.json
+./cards/deepwaterhorizon.json

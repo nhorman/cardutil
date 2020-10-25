@@ -98,6 +98,33 @@
       "latdir": "North",
       "width": 20,
       "height": 20
+    },
+    {
+      "location": "Russia",
+      "longitude": 97.733,
+      "latitude": 64.683,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "South_Korea",
+      "longitude": 127.683,
+      "latitude": 36.633,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "South Korea",
+      "longitude": 127.683,
+      "latitude": 36.633,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
     }
   ]
 }
