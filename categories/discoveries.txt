@@ -1,0 +1,5 @@
+./cards/kingtut.json
+./cards/machupicchu.json
+./cards/rosettastone.json
+./cards/simonthrace.json
+./cards/cholula.json

@@ -46,6 +46,6 @@ echo -e "\t \"credittext\": \"$CREDITTEXT\"," >> $CARDFILE
 echo -e "\t \"crediturl\": \"$CREITURL\"" >> $CARDFILE
 echo "}" >> $CARDFILE
 
-echo "./$CARDFILE" >> categories/$CATEGORY.txt
+echo "$CARDFILE" >> categories/$CATEGORY.txt
 
 

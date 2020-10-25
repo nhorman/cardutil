@@ -5,3 +5,4 @@
 ./cards/inchon.json
 ./cards/steelstrike.json
 ./cards/deepwaterhorizon.json
+./cards/monalisa.json
