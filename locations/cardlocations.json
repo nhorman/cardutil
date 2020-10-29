@@ -125,6 +125,69 @@
       "latdir": "North",
       "width": 20,
       "height": 20
+    },
+    {
+      "location": "Egypt",
+      "longitude": 29.266,
+      "latitude": 26.25,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Peru",
+      "longitude": 75.033,
+      "latitude": 6.866,
+      "longdir": "West",
+      "latdir": "South",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "1863",
+      "longitude": 22.533,
+      "latitude": 40.75,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Mexico",
+      "longitude": 99.116,
+      "latitude": 19.416,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Turkey",
+      "longitude": 34.916,
+      "latitude": 38.95,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Cuba",
+      "longitude": 80.816,
+      "latitude": 23,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Australia",
+      "longitude": 134.75,
+      "latitude": 24.766,
+      "longdir": "East",
+      "latdir": "South",
+      "width": 20,
+      "height": 20
     }
   ]
 }

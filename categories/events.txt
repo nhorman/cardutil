@@ -6,3 +6,8 @@
 ./cards/steelstrike.json
 ./cards/deepwaterhorizon.json
 ./cards/monalisa.json
+./cards/perlharbor.json
+./cards/gallipoli.json
+./cards/bayofpigs.json
+./cards/yalta.json
+./cards/australia.json
