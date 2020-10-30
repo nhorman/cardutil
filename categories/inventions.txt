@@ -18,4 +18,6 @@ cards/morsecode.json
 cards/iphone.json
 ./cards/touchtonephone.json
 ./cards/laser.json
-cards/tv.json
+./cards/tv.json
+./cards/moai.json
+./cards/radio.json

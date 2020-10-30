@@ -3,3 +3,5 @@
 ./cards/rosettastone.json
 ./cards/simonthrace.json
 ./cards/cholula.json
+./cards/richardiii.json
+./cards/altamira.json
