@@ -1,0 +1,9 @@
+{
+	"storyname": "Famous Historic Conincidences",
+	"pages": [
+		{
+			"pagefile": "./stories/coincidences/page1.html",
+			"correctcards": [ "tomjefferson", "johnadams" ]
+		}
+	]
+}

@@ -7,6 +7,11 @@ CATEGORY=`echo $LISTFILE | cut -d'.' -f1`
 
 for i in `cat $LIST`
 do
-	./addcard.sh $DB $i $CATEGORY
+	if [ "$LISTFILE" == "stories" ]
+	then
+		./addcard.sh $DB $i $CATEGORY 1
+	else
+		./addcard.sh $DB $i $CATEGORY 0
+	fi
 done
 

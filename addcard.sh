@@ -3,7 +3,11 @@
 DB=$1
 JSONFILE=$2
 CATEGORY=$3
+STORYCARD=$4
 TMPDIR=$(mktemp -d addcard.XXXXXX)
+CARDNAME=$(basename $JSONFILE)
+CARDNAME=$(echo $CARDNAME | cut -d'.' -f1)
+set +x
 
 function cleanup()
 {
@@ -23,6 +27,13 @@ CREDITTEXT=$(jq '.credittext' $JSONFILE)
 CREDITURL=$(jq  '.crediturl' $JSONFILE)
 CARDCROP=$(jq -r '.cardcrop' $JSONFILE)
 COUNTRYCODE=$(jq -r '.countrycode' $JSONFILE)
+
+if [ "$STORYCARD" == "y" ]
+then
+	STORYCARD=1
+else
+	STORYCARD=0
+fi
 
 if [ -z "$CATEGORY" ]
 then
@@ -59,5 +70,5 @@ composite -compose atop -gravity center -geometry +0-15 $TMPDIR/cardlogo.png bor
 convert $TMPDIR/cardfullimage.png -crop 168x188 +repage -resize 148x168 +repage -colors 32 -gravity south -pointsize 10 -annotate +0+10 "$CARDTEXT" $TMPDIR/logo.png
 
 #insert the data into the table
-echo "insert into card(cardlogo, level, year, location, category, cardtext, credittext, crediturl) " \
-     "values(x'"$(hexdump -v -e '1/1 "%02x"' $TMPDIR/logo.png)"', $LEVEL, $YEAR, $LOCATION, \"$CATEGORY\", $CARDTEXT, $CREDITTEXT, $CREDITURL);" | sqlite3 $DB
+echo "insert into card(cardlogo, level, year, location, storyonly, cardname, category, cardtext, credittext, crediturl) " \
+     "values(x'"$(hexdump -v -e '1/1 "%02x"' $TMPDIR/logo.png)"', $LEVEL, $YEAR, $LOCATION, $STORYCARD, \"$CARDNAME\", \"$CATEGORY\", $CARDTEXT, $CREDITTEXT, $CREDITURL);" | sqlite3 $DB
