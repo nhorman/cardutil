@@ -1,5 +1,4 @@
 #!/bin/sh
-
 DB=$1
 JSONFILE=$2
 TMPDIR=$(mktemp -d addcard.XXXXXX)
@@ -26,6 +25,8 @@ do
 	let PAGENUMBER=$i+1
 	echo "Building page $i for story $STORYNAME"
 	PAGEFILE=$(jq --argjson idx "$i" -r '.pages[$idx].pagefile' $JSONFILE)
+	ANSWERFILE=$(jq --argjson idx "$i" -r '.pages[$idx].answerfile' $JSONFILE)
+	ANSWERORDERMATTERS=$(jq --argjson idx "$i" -r '.pages[$idx].answerordermatters' $JSONFILE)
 	CORRECTCARDS=""
 	CORRECTCOUNT=$(jq --argjson idx "$i" '.pages[$idx].correctcards | length' $JSONFILE)
 	let CORRECTCOUNT=$CORRECTCOUNT-1
@@ -48,5 +49,11 @@ do
 		fi
 	done
 
-	echo "insert into storypage (pagenumber, storyname, storytext, correctcardname) values ($PAGENUMBER, $STORYNAME, readfile(\"$PAGEFILE\"), \"$CORRECTCARDS\");" | sqlite3 $DB 
+	if [ "$ANSWERFILE" == "none" ]
+	then
+		echo "insert into storypage (pagenumber, storyname, storytext, correctcardname, answerordermatters, answertext) values ($PAGENUMBER, $STORYNAME, readfile(\"$PAGEFILE\"), \"$CORRECTCARDS\", $ANSWERORDERMATTERS, \"none\");" | sqlite3 $DB 
+	else
+		echo "insert into storypage (pagenumber, storyname, storytext, correctcardname, answerordermatters, answertext) values ($PAGENUMBER, $STORYNAME, readfile(\"$PAGEFILE\"), \"$CORRECTCARDS\", $ANSWERORDERMATTERS, readfile(\"$ANSWERFILE\"));" | sqlite3 $DB 
+	fi
+
 done

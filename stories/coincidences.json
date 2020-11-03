@@ -1,9 +1,17 @@
 {
-	"storyname": "Famous Historic Conincidences",
+	"storyname": "Famous Historic Coincidences",
 	"pages": [
 		{
 			"pagefile": "./stories/coincidences/page1.html",
-			"correctcards": [ "tomjefferson", "johnadams" ]
+			"correctcards": [],
+			"answerordermatters": 0,
+			"answerfile": "none"
+		},
+		{
+			"pagefile": "./stories/coincidences/page2.html",
+			"correctcards": ["tomjefferson", "johnadams"],
+			"answerordermatters": 0,
+			"answerfile": "./stories/coincidences/page2_answer.html"
 		}
 	]
 }

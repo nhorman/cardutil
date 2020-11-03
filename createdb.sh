@@ -9,5 +9,5 @@ echo "CREATE TABLE card (rowId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, level
 
 echo "CREATE TABLE stories(rowId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, storyname TEXT NOT NULL);" | sqlite3 $1
 
-echo "CREATE TABLE storypage(rowId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, pagenumber INTEGER NOT NULL, storyname TEXT NOT NULL, storytext TEXT NOT NULL, correctcardname TEXT NOT NULL);" | sqlite3 $1
+echo "CREATE TABLE storypage(rowId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, pagenumber INTEGER NOT NULL, storyname TEXT NOT NULL, storytext BLOB NOT NULL, correctcardname TEXT NOT NULL, answerordermatters INTEGER NOT NULL, answertext BLOB NOT NULL);" | sqlite3 $1
 
