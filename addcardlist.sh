@@ -9,11 +9,9 @@ for i in `cat $LIST`
 do
 	if [ "$CATEGORY" != "stories" ]
 	then
-		echo "Non-Story card"
-		./addcard.sh $DB $i $CATEGORY 1
+		./addcard.sh $DB $i $CATEGORY y
 	else
-		echo "STORY CARD"
-		./addcard.sh $DB $i $CATEGORY 0
+		./addcard.sh $DB $i $CATEGORY n
 	fi
 done
 

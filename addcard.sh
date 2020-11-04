@@ -7,8 +7,7 @@ STORYCARD=$4
 TMPDIR=$(mktemp -d addcard.XXXXXX)
 CARDNAME=$(basename $JSONFILE)
 CARDNAME=$(echo $CARDNAME | cut -d'.' -f1)
-set +x
-
+echo "$STORYCARD"
 function cleanup()
 {
 	rm -rf $TMPDIR 
@@ -30,9 +29,9 @@ COUNTRYCODE=$(jq -r '.countrycode' $JSONFILE)
 
 if [ "$STORYCARD" == "y" ]
 then
-	STORYCARD=1
-else
 	STORYCARD=0
+else
+	STORYCARD=1
 fi
 
 if [ -z "$CATEGORY" ]
