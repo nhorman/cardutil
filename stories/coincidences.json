@@ -12,6 +12,12 @@
 			"correctcards": ["tomjefferson", "johnadams"],
 			"answerordermatters": 0,
 			"answerfile": "./stories/coincidences/page2_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page3.html",
+			"correctcards": ["roberttodd", "edwinbooth", "johnwilkesbooth", "abrahamlincoln"],
+			"answerordermatters": 1,
+			"answerfile": "none"
 		}
 	]
 }
