@@ -1,6 +1,6 @@
 cards/tomjefferson.json
 cards/johnadams.json
-cards/robertodd.json
+cards/roberttodd.json
 ./cards/edwinbooth.json
 ./cards/johnwilkesbooth.json
 ./cards/abrahamlincoln.json

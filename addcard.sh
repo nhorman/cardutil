@@ -7,7 +7,7 @@ STORYCARD=$4
 TMPDIR=$(mktemp -d addcard.XXXXXX)
 CARDNAME=$(basename $JSONFILE)
 CARDNAME=$(echo $CARDNAME | cut -d'.' -f1)
-echo "$STORYCARD"
+
 function cleanup()
 {
 	rm -rf $TMPDIR 
