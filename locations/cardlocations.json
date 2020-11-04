@@ -1,6 +1,60 @@
 {
   "locations": [
     {
+      "location": "Egypt",
+      "longitude": 29.266,
+      "latitude": 26.25,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Peru",
+      "longitude": 75.033,
+      "latitude": 6.866,
+      "longdir": "West",
+      "latdir": "South",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Greece",
+      "longitude": 21.983,
+      "latitude": 38.983,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Mexico",
+      "longitude": 100,
+      "latitude": 22.5,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "England",
+      "longitude": 0.533,
+      "latitude": 52.783,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Spain",
+      "longitude": 4.833,
+      "latitude": 39.316,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
       "location": "America",
       "longitude": 87.25,
       "latitude": 33.733,
@@ -19,11 +73,56 @@
       "height": 20
     },
     {
+      "location": "Russia",
+      "longitude": 97.733,
+      "latitude": 64.683,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "South_Korea",
+      "longitude": 127.1,
+      "latitude": 37.316,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
       "location": "Italy",
       "longitude": 12.666,
       "latitude": 42.633,
       "longdir": "East",
       "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Turkey",
+      "longitude": 34.916,
+      "latitude": 38.95,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Cuba",
+      "longitude": 80.816,
+      "latitude": 23,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Australia",
+      "longitude": 134.75,
+      "latitude": 24.766,
+      "longdir": "East",
+      "latdir": "South",
       "width": 20,
       "height": 20
     },
@@ -49,15 +148,6 @@
       "location": "China",
       "longitude": 104.983,
       "latitude": 35,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Greece",
-      "longitude": 21.983,
-      "latitude": 38.983,
       "longdir": "East",
       "latdir": "North",
       "width": 20,
@@ -91,101 +181,20 @@
       "height": 20
     },
     {
-      "location": "England",
-      "longitude": 0.533,
-      "latitude": 52.783,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Russia",
-      "longitude": 97.733,
-      "latitude": 64.683,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "South_Korea",
-      "longitude": 127.683,
-      "latitude": 36.633,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "South Korea",
-      "longitude": 127.683,
-      "latitude": 36.633,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Egypt",
-      "longitude": 29.266,
-      "latitude": 26.25,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Peru",
-      "longitude": 75.033,
-      "latitude": 6.866,
+      "location": "Easter_Island",
+      "longitude": 109.366,
+      "latitude": 27.116,
       "longdir": "West",
       "latdir": "South",
       "width": 20,
       "height": 20
     },
     {
-      "location": "1863",
-      "longitude": 22.533,
-      "latitude": 40.75,
+      "location": "none",
+      "longitude": 0,
+      "latitude": 0,
       "longdir": "East",
       "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Mexico",
-      "longitude": 99.116,
-      "latitude": 19.416,
-      "longdir": "West",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Turkey",
-      "longitude": 34.916,
-      "latitude": 38.95,
-      "longdir": "East",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Cuba",
-      "longitude": 80.816,
-      "latitude": 23,
-      "longdir": "West",
-      "latdir": "North",
-      "width": 20,
-      "height": 20
-    },
-    {
-      "location": "Australia",
-      "longitude": 134.75,
-      "latitude": 24.766,
-      "longdir": "East",
-      "latdir": "South",
       "width": 20,
       "height": 20
     }

@@ -13,6 +13,11 @@ export COUNTRYCODE=$1
 shift
 export RLOC=$*
 
+if [ "$COUNTRYCODE" == "xx" ]
+then
+	RLOC=none
+fi
+
 #Create the output file if it doesnt exist
 if [ ! -f locations/cardlocations.json ]
 then
@@ -39,62 +44,70 @@ fi
 WIDTH=20
 HEIGHT=20
 
-#Try to get location from opencage
-curl -s -G -o $TMPDIR/opencage.json --data-urlencode "countrycode=$COUNTRYCODE" --data-urlencode "q=$GRLOC" "https://api.opencagedata.com/geocode/v1/json?key=4079fa880a1b4d83b3a9b07a9323b64a"
-LONGRESULT=$(jq -r '.results[] | select(.components.country="$GRLOC") | .annotations.DMS.lng' $TMPDIR/opencage.json | head -n 1 | tr -cd '[:print:]' | tr -d \')
-LATRESULT=$(jq -r '.results[] | select(.components.country="$GRLOC") | .annotations.DMS.lat' $TMPDIR/opencage.json | head -n 1 | tr -cd '[:print:]' | tr -d \')
-
-if [ -n "$LONGRESULT" -a -n "$LATRESULT" ]
+if [ "$COUNTRYCODE" != "xx" ]
 then
-	LONGDEG=$(echo $LONGRESULT | cut -d" " -f1)
-	LONGMIN=$(echo $LONGRESULT | cut -d" " -f2)
-	EW=$(echo $LONGRESULT | cut -d" " -f4)
-	LATDEG=$(echo $LATRESULT | cut -d" " -f1)
-	LATMIN=$(echo $LATRESULT | cut -d" " -f2)
-	NS=$(echo $LATRESULT | cut -d" " -f4)
+	#Try to get location from opencage
+	curl -s -G -o $TMPDIR/opencage.json --data-urlencode "countrycode=$COUNTRYCODE" --data-urlencode "q=$GRLOC" "https://api.opencagedata.com/geocode/v1/json?key=4079fa880a1b4d83b3a9b07a9323b64a"
+	LONGRESULT=$(jq -r '.results[] | select(.components.country="$GRLOC") | .annotations.DMS.lng' $TMPDIR/opencage.json | head -n 1 | tr -cd '[:print:]' | tr -d \')
+	LATRESULT=$(jq -r '.results[] | select(.components.country="$GRLOC") | .annotations.DMS.lat' $TMPDIR/opencage.json | head -n 1 | tr -cd '[:print:]' | tr -d \')
 
-	LATITUDE=$(dc -e "3 k $LATMIN 60 / $LATDEG + p")
-	LONGITUDE=$(dc -e "3 k $LONGMIN 60 / $LONGDEG + p")
-	if [ "$EW" == "E" ]
+	if [ -n "$LONGRESULT" -a -n "$LATRESULT" ]
 	then
-		LONGDIR="East"
+		LONGDEG=$(echo $LONGRESULT | cut -d" " -f1)
+		LONGMIN=$(echo $LONGRESULT | cut -d" " -f2)
+		EW=$(echo $LONGRESULT | cut -d" " -f4)
+		LATDEG=$(echo $LATRESULT | cut -d" " -f1)
+		LATMIN=$(echo $LATRESULT | cut -d" " -f2)
+		NS=$(echo $LATRESULT | cut -d" " -f4)
+
+		LATITUDE=$(dc -e "3 k $LATMIN 60 / $LATDEG + p")
+		LONGITUDE=$(dc -e "3 k $LONGMIN 60 / $LONGDEG + p")
+		if [ "$EW" == "E" ]
+		then
+			LONGDIR="East"
+		else
+			LONGDIR="West"
+		fi
+		if [ "$NS" == "N" ]
+		then
+			LATDIR="North"
+		else
+			LATDIR="South"
+		fi
 	else
-		LONGDIR="West"
-	fi
-	if [ "$NS" == "N" ]
-	then
-		LATDIR="North"
-	else
-		LATDIR="South"
+		echo "Set location for $RLOC"
+
+		echo -n "lattitude: "
+		read LATITUDE 
+
+		echo -n "North or South [n/s]: "
+		read LATDIR
+
+		echo -n "longitude: "
+		read LONGITUDE 
+
+		echo -n "East or West [e/w]: "
+		read LONGDIR
+
+		if [ "$LONGDIR" == "e" ]
+		then
+			LONGDIR="East"
+		else
+			LONGDIR="West"
+		fi
+
+		if [ "$LATDIR" = "n" ]
+		then
+			LATDIR="North"
+		else
+			LATDIR="South"
+		fi
 	fi
 else
-	echo "Set location for $RLOC"
-
-	echo -n "lattitude: "
-	read LATITUDE 
-
-	echo -n "North or South [n/s]: "
-	read LATDIR
-
-	echo -n "longitude: "
-	read LONGITUDE 
-
-	echo -n "East or West [e/w]: "
-	read LONGDIR
-
-	if [ "$LONGDIR" == "e" ]
-	then
-		LONGDIR="East"
-	else
-		LONGDIR="West"
-	fi
-
-	if [ "$LATDIR" = "n" ]
-	then
-		LATDIR="North"
-	else
-		LATDIR="South"
-	fi
+	LATITUDE=0
+	LONGITUDE=0
+	LONGDIR="East"
+	LATDIR="North"
 fi
 
 cat <<< $(jq --arg RLOC "$GRLOC" --arg LATITUDE $LATITUDE --arg LONGITUDE $LONGITUDE --arg LONGDIR $LONGDIR --arg LATDIR $LATDIR --arg WIDTH $WIDTH --arg HEIGHT $HEIGHT \
