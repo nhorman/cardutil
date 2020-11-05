@@ -17,7 +17,26 @@
 			"pagefile": "./stories/coincidences/page3.html",
 			"correctcards": ["roberttodd", "edwinbooth", "johnwilkesbooth", "abrahamlincoln"],
 			"answerordermatters": 1,
-			"answerfile": "none"
+			"answerfile": "./stories/coincidences/page3_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page4.html",
+			"correctcards": ["abrahamlincoln", "johnfkennedy"],
+			"answerordermatters": 0,
+			"answerfile": "./stories/coincidences/page4_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page5.html",
+			"correctcards": ["roberttodd", "jamesagarfield", "williammckinley"],
+			"answerordermatters": 1,
+			"answerfile": "./stories/coincidences/page5_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page6.html",
+			"correctcards": ["wilmermclean"],
+			"answerordermatters": 0,
+			"answerfile": "./stories/coincidences/page6_answer.html"
 		}
+	
 	]
 }

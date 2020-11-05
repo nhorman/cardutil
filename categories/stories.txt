@@ -4,3 +4,7 @@ cards/roberttodd.json
 ./cards/edwinbooth.json
 ./cards/johnwilkesbooth.json
 ./cards/abrahamlincoln.json
+./cards/johnfkennedy.json
+./cards/jamesagarfield.json
+./cards/williammckinley.json
+cards/wilmermclean.json
