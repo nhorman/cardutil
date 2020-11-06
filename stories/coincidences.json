@@ -36,6 +36,12 @@
 			"correctcards": ["wilmermclean"],
 			"answerordermatters": 0,
 			"answerfile": "./stories/coincidences/page6_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page7.html",
+			"correctcards": ["edmondhalley", "halleyscomet", "marktwain"],
+			"answerordermatters": 1,
+			"answerfile": "./stories/conincidences/page7_answer.html"
 		}
 	
 	]

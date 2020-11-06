@@ -8,3 +8,6 @@ cards/roberttodd.json
 ./cards/jamesagarfield.json
 ./cards/williammckinley.json
 cards/wilmermclean.json
+./cards/edmondhalley.json
+./cards/halleyscomet.json
+cards/marktwain.json
