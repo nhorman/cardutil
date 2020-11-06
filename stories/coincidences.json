@@ -41,8 +41,20 @@
 			"pagefile": "./stories/coincidences/page7.html",
 			"correctcards": ["edmondhalley", "halleyscomet", "marktwain"],
 			"answerordermatters": 1,
-			"answerfile": "./stories/conincidences/page7_answer.html"
+			"answerfile": "./stories/coincidences/page7_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page8.html",
+			"correctcards": ["violetjessop", "olympic", "titanic", "britannic"],
+			"answerordermatters": 1,
+			"answerfile": "./stories/coincidences/page8_answer.html"
+		},
+		{
+			"pagefile": "./stories/coincidences/page9.html",
+			"correctcards": [],
+			"answerordermatters": 0,
+			"answerfile": "none"
 		}
-	
+		
 	]
 }

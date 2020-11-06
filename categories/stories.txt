@@ -11,3 +11,7 @@ cards/wilmermclean.json
 ./cards/edmondhalley.json
 ./cards/halleyscomet.json
 cards/marktwain.json
+./cards/violetjessop.json
+cards/titanic.json
+cards/olympic.json
+cards/britannic.json
