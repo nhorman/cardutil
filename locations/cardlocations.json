@@ -197,6 +197,15 @@
       "latdir": "North",
       "width": 20,
       "height": 20
+    },
+    {
+      "location": "Tunisia",
+      "longitude": 9.4,
+      "latitude": 33.833,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
     }
   ]
 }

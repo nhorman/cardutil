@@ -11,3 +11,4 @@
 ./cards/bayofpigs.json
 ./cards/yalta.json
 ./cards/australia.json
+./cards/609.json

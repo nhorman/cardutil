@@ -21,3 +21,5 @@ cards/iphone.json
 ./cards/tv.json
 ./cards/moai.json
 ./cards/radio.json
+./cards/catapault.json
+./cards/printingpress.json
