@@ -6,6 +6,13 @@
 			"correctcards": [],
 			"answerordermatters": 0,
 			"answerfile": "none"
-		}
+		},
+		{
+			"pagefile": "./stories/missingtreasures/page2.html",
+			"correctcards": ["amberroom"],
+			"answerordermatters": 0,
+			"answerfile": "./stories/missingtreasures/page2_answer.html"
+		}.
+	
 	]
 }
