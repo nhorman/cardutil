@@ -1,0 +1,11 @@
+{
+	"storyname": "Famous Missing Treasures",
+	"pages": [
+		{
+			"pagefile": "./stories/missingtreasures/page1.html",
+			"correctcards": [],
+			"answerordermatters": 0,
+			"answerfile": "none"
+		}
+	]
+}

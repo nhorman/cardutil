@@ -15,3 +15,10 @@ cards/marktwain.json
 cards/titanic.json
 cards/olympic.json
 cards/britannic.json
+cards/amberroom.json
+cards/menkaure.json
+cards/arkofthecovenant.json
+cards/masamune.json
+cards/libraryofthetsars.json
+cards/florantinediamond.json
+cards/nazigoldtoplitz.json
