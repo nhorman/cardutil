@@ -12,7 +12,13 @@
 			"correctcards": ["amberroom"],
 			"answerordermatters": 0,
 			"answerfile": "./stories/missingtreasures/page2_answer.html"
-		}.
+		},
+		{
+			"pagefile": "./stories/missingtreasures/page3.html",
+			"correctcards": ["arkofthecovenant"],
+			"answerordermatters": 0,
+			"answerfile": "./stories/missingtreasures/page3_answer.html"
+		},
 	
 	]
 }
