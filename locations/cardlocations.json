@@ -206,6 +206,42 @@
       "latdir": "North",
       "width": 20,
       "height": 20
+    },
+    {
+      "location": "South_Korea",
+      "longitude": 127.1,
+      "latitude": 37.316,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "Easter_Island",
+      "longitude": 109.366,
+      "latitude": 27.116,
+      "longdir": "West",
+      "latdir": "South",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "France",
+      "longitude": 1.883,
+      "latitude": 46.6,
+      "longdir": "East",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "location": "cuba",
+      "longitude": 80.816,
+      "latitude": 23,
+      "longdir": "West",
+      "latdir": "North",
+      "width": 20,
+      "height": 20
     }
   ]
 }

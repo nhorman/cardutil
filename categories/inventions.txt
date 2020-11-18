@@ -24,3 +24,4 @@ cards/iphone.json
 ./cards/catapault.json
 ./cards/printingpress.json
 ./cards/combustionengine.json
+cards/phonograph.json

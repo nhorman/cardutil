@@ -19,6 +19,11 @@
 			"answerordermatters": 0,
 			"answerfile": "./stories/missingtreasures/page3_answer.html"
 		},
-	
+		{
+			"pagefile": "./stories/missingtreasures/page4.html",
+			"correctcards": ["hernandocortes","montezumaii","laketexcoco"],
+			"answerordermatters": 1,
+			"answerfile": "./stories/missingtreasures/page4_answer.html"
+		}
 	]
 }

@@ -13,3 +13,4 @@
 ./cards/australia.json
 ./cards/609.json
 ./cards/chernobyldisaster.json
+cards/mainship.json

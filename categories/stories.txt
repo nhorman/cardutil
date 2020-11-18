@@ -22,3 +22,6 @@ cards/masamune.json
 cards/libraryofthetsars.json
 cards/florantinediamond.json
 cards/nazigoldtoplitz.json
+./cards/hernandocortes.json
+cards/montezumaii.json
+cards/laketexcoco.json
