@@ -23,3 +23,4 @@ cards/iphone.json
 ./cards/radio.json
 ./cards/catapault.json
 ./cards/printingpress.json
+./cards/combustionengine.json
